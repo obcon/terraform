@@ -3,7 +3,7 @@ FROM obcon/aws-cli
 USER root
 
 ENV GLIBC 2.23-r3
-ENV TERRAFORM_VERSION 0.7.5
+ENV TERRAFORM_VERSION 0.7.6
 
 RUN apk --update add git openssh-client
 
