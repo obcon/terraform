@@ -1,11 +1,9 @@
-FROM obcon/aws-cli
+FROM obcon/aws-cli:1.11.64
 
 USER root
 
 ENV GLIBC 2.23-r3
-ENV TERRAFORM_VERSION 0.8.5
-
-RUN apk --update add git openssh-client
+ENV TERRAFORM_VERSION 0.9.1
 
 RUN curl -L https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub && \
     curl -L https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC}/glibc-${GLIBC}.apk -o glibc-${GLIBC}.apk && \
